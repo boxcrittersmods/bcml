@@ -11,7 +11,7 @@ function LoadJS(file) {
   script.src = file;
   document.head.appendChild(script);
 }
-LoadJS("https://raw.githubusercontent.com/boxcritters/bcml/master/build/bcml.js");
+LoadJS("https://bc-mod-api.herokuapp.com/cors/https://raw.githubusercontent.com/boxcritters/bcml/master/build/bcml.js");
 LoadJS=null;
 ```
 
