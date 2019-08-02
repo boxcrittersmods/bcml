@@ -40,6 +40,7 @@ BCML_ModLoader.RegisterMod(ModName);
 ```
 
 # Build Instructions
+**THIS IS FOR IF YOU WANT TO CONTRIBUTE TO BCML***
 
 ## Setup Workspace
 
