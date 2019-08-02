@@ -1,10 +1,7 @@
 //@ts-check
 var BCML_ModLoader = (function() {
     function LoadJS(file) {
-        var script = document.createElement("script");
-        script.type = "text/javascript";
-        script.src = file;
-        document.head.appendChild(script);
+        console.warn("BCML: this feature is disabled because CORB is weird.")
       }
 
     class BCML_ModLoader {
@@ -15,7 +12,6 @@ var BCML_ModLoader = (function() {
         LoadMod(modFile) {
             console.log("Loading Mod...")
             LoadJS(modFile);
-            console.log("Mod Loaded");
         }
 
         RegisterMod(mod) {
