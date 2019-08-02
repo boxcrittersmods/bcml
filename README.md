@@ -11,12 +11,13 @@ function LoadJS(file) {
   script.src = file;
   document.head.appendChild(script);
 }
-LoadJS("http://github.com/boxcritters/.....")
+LoadJS("https://raw.githubusercontent.com/boxcritters/bcml/master/build/bcml.js");
+LoadJS=null;
 ```
 
 #Install Mod
 ```js
-BCML_ModLoader.LoadMod("MODJS_URL);
+BCML_ModLoader.LoadMod("MODJS_URL");
 ```
 
 # Create Mod
