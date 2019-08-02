@@ -19,7 +19,7 @@ module.exports = function(grunt) {
       options: {
         //sourceMap: "inline",
         sourceMap: false,
-        retainLines: true,
+        //retainLines: true,
         presets: ["@babel/preset-env"]
       },
       build: {
