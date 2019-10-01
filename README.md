@@ -1,6 +1,6 @@
 # bcml
 
-> **ANNOUNCEMENT**: Development direction may change as we move from client script injection to using the Official TBA BoxCritters APi
+> **ANNOUNCEMENT**: Development direction may change as we split development between creating a client sided API and interfacing with the Official TBA BoxCritters APi
 
 Mod Loader and API for Box Critters
 
