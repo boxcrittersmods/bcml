@@ -1,23 +1,23 @@
 {
   "name": "bcml",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Mod Loader and API for Box Critters",
-  "main": "index.js",
   "scripts": {
-    "start": "npm run build",
-    "build": "grunt build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run client",
+    "setup": "node runtime/setup.js",
+    "client": "node runtime/client.js",
+    "build": "node runtime/build.js"
   },
   "author": "bcmc",
   "license": "SEE LICENSE IN LICENSE",
-  "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "grunt": "^1.0.4",
-    "grunt-babel": "^8.0.0",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-uglify": "^4.0.1",
-    "load-grunt-tasks": "^5.1.0"
+  "dependencies": {
+    "browserify": "^16.5.0",
+    "express": "^4.17.1",
+    "extract-zip": "^1.6.7",
+    "fs-extra": "^8.1.0",
+    "tn-webserver": "^1.0.3"
   },
-  "dependencies": {}
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }

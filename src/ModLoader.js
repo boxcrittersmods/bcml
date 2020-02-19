@@ -1,5 +1,4 @@
-//@ts-check
-var BCML_ModLoader = (function() {
+var BCML_ModnLoader = (function() {
     function LoadJS(file) {
         console.warn("BCML: this feature is disabled because CORB is weird.")
       }
