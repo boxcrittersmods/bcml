@@ -8,29 +8,29 @@ console.log("-----------------------------------");
 console.log("Created by the BC Modding Community");
 console.log("-----------------------------------");
 
-BCMC_Util.replaceFunc(World.prototype, {
-	'login': function init(old, ...params) {
+
+const BCML_Util = require('./util')
+const BCML_Mod = require('./mod');
+const BCML_ModLoader = require('./modloader');
+
+BCML_Util.replaceFunc(World.prototype, {
+	'login': function(old, ...params) {
 		old(...params);
 		BCML_ModLoader.Init();
 	}
 });
-BCMC_Util.replaceFunc(StageContainer.prototype, {
-	'constructor': function init(old, ...params) {
-		old(...params);
-		createjs.Ticker.on("tick", function (t) {
+BCML_Util.replaceFunc(StageContainer.prototype, {
+	'update': function (old, ...params) {
+			old.call(this,...params);
 			BCML_ModLoader.Update();
-		});
 	}
 });
 
 
-/*window = Object.assign(window, {
+window = Object.assign(window, {
 	BCML_Mod,
 	BCML_ModLoader
-});*/
-window.BCMC_Util = require('./util')
-window.BCML_Mod = require('./mod');
-window.BCML_ModLoader = require('./modloader');
+});
 
 },{"./mod":2,"./modloader":3,"./util":4}],2:[function(require,module,exports){
 // @ts-check
@@ -81,6 +81,7 @@ class BCML_ModLoader {
 	}
 
 	Init() {
+		console.log("Initialising Mods");
 		this.mods.forEach(mod=>{
 			mod.Init();
 		});

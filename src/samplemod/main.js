@@ -12,11 +12,7 @@
 }*/
 
 console.log("Hello I am a sample mod");
-console.log(BCML_ModLoader);
-/*class SampleMod extends BCML_Mod {
-	constructor() {
-		super();
-	}
+class SampleMod extends BCML_Mod {
 
 	Init() {
 		console.log("Sample Mod Initialised");
@@ -27,4 +23,4 @@ console.log(BCML_ModLoader);
 	}
 }
 
-BCML_ModLoader.RegisterMod(new SampleMod());*/
+BCML_ModLoader.RegisterMod(new SampleMod());

@@ -1,0 +1,68 @@
+==============
+BCML_ModLoader
+==============
+
+
+
+
+Constructor
+===========
+.. list-table::
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Parameter
+     - Type
+     - Description
+
+Properties
+==========
+.. _global.rst#BCML_ModLo.mods:
+
+
+.mods
+-----
+Type: `Array.<BCML_Mod> <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array>`_
+
+
+Methods
+=======
+.. _global.rst#BCML_ModLo.RegisterMod:
+
+.RegisterMod(mod)
+-----------------
+
+.. list-table::
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Parameter
+     - Type
+     - Description
+   * - mod
+     - :doc:`BCML_Mod`_
+     - 
+.. _global.rst#BCML_ModLo.Init:
+
+.Init()
+-------
+
+.. list-table::
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Parameter
+     - Type
+     - Description
+.. _global.rst#BCML_ModLo.Update:
+
+.Update()
+---------
+
+.. list-table::
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Parameter
+     - Type
+     - Description

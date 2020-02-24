@@ -16,19 +16,26 @@ class BCML_ModLoader {
 	}
 
 	/**
-	 * 
+	 * @method
 	 * @param {BCML_Mod} mod 
 	 */
 	RegisterMod(mod) {
 		this.mods.push(mod);
 	}
 
+	/**
+	 * @method
+	 */
 	Init() {
+		console.log("Initialising Mods");
 		this.mods.forEach(mod=>{
 			mod.Init();
 		});
 	}
 
+	/**
+	 * @method
+	 */
 	Update() {
 		this.mods.forEach(mod=>{
 			mod.Update();

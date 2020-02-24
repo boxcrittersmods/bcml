@@ -6,11 +6,13 @@
     "start": "npm run client",
     "setup": "node runtime/setup.js",
     "client": "node runtime/client.js",
-    "build": "node runtime/build.js"
+	"build": "node runtime/build.js",
+    "docs": "jsdoc -t node_modules/bcmc-jsdoc/template -d docs -r src/bcml/"
   },
   "author": "bcmc",
   "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
+    "bcmc-jsdoc": "github:boxcritters/jsdoc-template",
     "browserify": "^16.5.0",
     "combined-stream": "^1.0.8",
     "express": "^4.17.1",
