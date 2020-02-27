@@ -9,11 +9,13 @@ console.log("-----------------------------------");
 
 const BCML_LogManager = require('./common/logger');
 const BCML_ModLoader = require('./common/modLoader');
+const Mod = require('./common/mod')
 
 require('./bcmlMod');
 
 
 window = Object.assign(window,{
 	BCML_LogManager,
-	BCML_ModLoader
+	BCML_ModLoader,
+	Mod
 });

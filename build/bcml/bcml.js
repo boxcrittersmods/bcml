@@ -14,7 +14,7 @@ class BCMLMod extends Mod {
 BCML_ModLoader.registerMod(new BCMLMod());
 },{"./common/logger":2,"./common/mod":3,"./common/modLoader":4,"./modinfo":6}],2:[function(require,module,exports){
 function log(logger,type,msg){
-	console[type](`[${logger}][${type}]`,...msg);
+	console[type](`[${logger}] [${type}]`,...msg);
 }
 
 class BCML_Logger {
@@ -95,16 +95,18 @@ console.log("-----------------------------------");
 
 const BCML_LogManager = require('./common/logger');
 const BCML_ModLoader = require('./common/modLoader');
+const Mod = require('./common/mod')
 
 require('./bcmlMod');
 
 
 window = Object.assign(window,{
 	BCML_LogManager,
-	BCML_ModLoader
+	BCML_ModLoader,
+	Mod
 });
 
-},{"./bcmlMod":1,"./common/logger":2,"./common/modLoader":4}],6:[function(require,module,exports){
+},{"./bcmlMod":1,"./common/logger":2,"./common/mod":3,"./common/modLoader":4}],6:[function(require,module,exports){
 module.exports = {
 	id:"bcml",
 	name:"bcml",
