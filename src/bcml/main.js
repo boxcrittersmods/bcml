@@ -7,26 +7,13 @@ console.log("-----------------------------------");
 console.log("Created by the BC Modding Community");
 console.log("-----------------------------------");
 
+const BCML_LogManager = require('./common/logger');
+const BCML_ModLoader = require('./common/modLoader');
 
-const BCML_Util = require('./util')
-const BCML_Mod = require('./mod');
-const BCML_ModLoader = require('./modloader');
-
-BCML_Util.replaceFunc(World.prototype, {
-	'login': function(old, ...params) {
-		old(...params);
-		BCML_ModLoader.Init();
-	}
-});
-BCML_Util.replaceFunc(StageContainer.prototype, {
-	'update': function (old, ...params) {
-			old(...params);
-			BCML_ModLoader.Update();
-	}
-});
+require('./bcmlMod');
 
 
-window = Object.assign(window, {
-	BCML_Mod,
+window = Object.assign(window,{
+	BCML_LogManager,
 	BCML_ModLoader
 });

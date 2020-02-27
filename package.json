@@ -6,7 +6,7 @@
     "start": "npm run client",
     "setup": "node runtime/setup.js",
     "client": "node runtime/client.js",
-	"build": "node runtime/build.js",
+    "build": "node runtime/build.js",
     "docs": "jsdoc -t node_modules/bcmc-jsdoc/template -d docs -r src/bcml/"
   },
   "author": "bcmc",

@@ -1,0 +1,32 @@
+{{#doclet.rstReference}}
+.. _{{doclet.rstReference}}:
+
+{{/doclet.rstReference}}
+{{#h1}}{{doclet.name}}{{/h1}}
+{{#doclet.augments}}extends {{^type.link}}:doc:{{/type.link}}`{{#type.names}}{{.}}{{/type.names}}{{#type.link}} <{{.}}>{{/type.link}}`{{#type.link}}_{{/type.link}}{{/doclet.augments}}
+
+{{doclet.description}}
+
+{{#h2}}Constructor{{/h2}}
+.. list-table::
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Parameter
+     - Type
+     - Description
+{{#doclet.params}}
+   * - {{name}}
+     - {{#type}}{{^type.link}}:doc:{{/type.link}}`{{#type.names}}{{.}}{{/type.names}}{{#type.link}} <{{.}}>{{/type.link}}`_{{/type}}
+     - {{description}}
+{{/doclet.params}}
+
+{{#h2}}Properties{{/h2}}
+{{#member}}
+{{>member}}
+{{/member}}
+
+{{#h2}}Methods{{/h2}}
+{{#function}}
+{{>func}}
+{{/function}}

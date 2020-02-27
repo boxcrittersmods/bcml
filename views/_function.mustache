@@ -1,0 +1,21 @@
+{{#rstReference}}
+.. _{{rstReference}}:
+
+{{/rstReference}}
+{{#h3}}.{{signature}}{{/h3}}
+
+.. list-table::
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Parameter
+     - Type
+     - Description
+{{#params}}
+   * - {{name}}
+     - {{^type.link}}:doc:{{/type.link}}`{{#type.names}}{{.}}{{/type.names}}{{#type.link}} <{{.}}>{{/type.link}}`_
+     - {{description}}
+{{/params}}
+{{#returns}}
+Returns: {{^type.link}}:doc:{{/type.link}}`{{#type.names}}{{.}}{{/type.names}}{{#type.link}} <{{.}}>{{/type.link}}`_ {{signature}} {{description}}
+{{/returns}}

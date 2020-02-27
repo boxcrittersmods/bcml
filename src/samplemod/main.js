@@ -10,17 +10,3 @@
 		start();
 	};
 }*/
-
-console.log("Hello I am a sample mod");
-class SampleMod extends BCML_Mod {
-
-	Init() {
-		console.log("Sample Mod Initialised");
-	}
-
-	Update() {
-		console.log("Sample Mod Update");
-	}
-}
-
-BCML_ModLoader.RegisterMod(new SampleMod());
