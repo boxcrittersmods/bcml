@@ -1,5 +1,6 @@
 const BCML_LogManager = require('./logger');
 const Mod = require('./mod');
+const EventManager = require('../events/eventManager');
 
 class BCPMod extends Mod {
 	constructor() {
@@ -19,6 +20,7 @@ class BCML_ModLoader {
 
 	registerMod(mod) {
 		this.mods.push(mod);
+		EventManager.registerBus(mod.eventBus);
 	}
 }
 
